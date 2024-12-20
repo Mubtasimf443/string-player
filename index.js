@@ -243,11 +243,11 @@ export function breakJsonData(data) {
     for (let i = 5; i > 4; i++) {
         if (data.includes('8}')) data = data.replace('8}', `8${breakString}}`);
         if (!data.includes('8}')) i = 3;
-    } 
+    }
     for (let i = 5; i > 4; i++) {
         if (data.includes('9}')) data = data.replace('9}', `9${breakString}}`);
         if (!data.includes('9}')) i = 3;
-    } 
+    }
     for (let i = 5; i > 4; i++) {
         if (data.includes('0}')) data = data.replace('0}', `0${breakString}}`);
         if (!data.includes('0}')) i = 3;
