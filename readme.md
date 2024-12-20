@@ -141,6 +141,47 @@ log(data);
 
 ```
 
+##### From string-player@1.0.6 you can parse object on breckjsondata 
+
+```
+import { breakJsonData, log } from "./index.js"
+
+
+let data = {
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    10: 10
+}
+
+log(data);
+
+/* 
+it prints
+{
+    '0': 0,
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+    '10': 10
+}
+    
+*/
+```
+
 
 ***You can contribute also by joining github-***<a href="https://github.com/Mubtasimf443/string-player">github Repository</a>
 
