@@ -2,12 +2,12 @@
 بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ  ﷺ  
 InshaAllah, By his marcy I will Gain Success 
 */
+export const breakString=`
+`;
+export const space4='    ';
 
-import { breakString, space4 } from "./variables.js";
 
-
-
-export async function MakePriceString(number) {
+exports.MakePriceString= async function MakePriceString(number) {
     if (Number(number).toString().toLocaleLowerCase==='nan') {
         log({number});
         throw 'error ,number is a nan'
@@ -44,7 +44,7 @@ export async function MakePriceString(number) {
 
 
 }
-export  function checkTimeString(time) {
+exports.checkTimeString=  function checkTimeString(time) {
     if (typeof time != 'string') throw 'not a correct time ' +time
     if ( !time.includes(':')) throw 'not a correct time ' +time
     if ( time.length !== 5) throw 'not a correct time ' +time
@@ -59,7 +59,7 @@ export  function checkTimeString(time) {
     let string =(time[0] > 12 ? Number(time[0])-12 : time[0] ) + ':'  + time[1] + ' ' + (time[0] > 11 ? 'PM': 'AM' );
     return string
 }
-export function mekeLinkString(data) {
+exports.mekeLinkString= function mekeLinkString(data) {
     if (typeof data !== 'string') throw 'Data not a string' +data;
     let limit=9;
     for (let i = 10; i>limit ; i++) {
@@ -70,7 +70,7 @@ export function mekeLinkString(data) {
     }
     return data
 }
-export async function repleCaracter(txt) {
+exports.repleCaracter=  async function repleCaracter(txt) {
     if (!txt) throw new Error('Element is Undefined')
     let text=txt;
     let erorBoudary =0;       
@@ -124,10 +124,10 @@ export async function repleCaracter(txt) {
     }
     return text
 }  
-export function log(value) {
+exports.log= function log(value) {
     return console.log(value)
 }
-export class GenerateOTP{
+exports.GenerateOTP= class GenerateOTP{
     constructor(length) {
         if (typeof length !== 'number') length=6;
         let max='1';
@@ -151,7 +151,7 @@ export class GenerateOTP{
             return generatePin({max:this.max, min :this.min })
         }
 }
-export function makeUrlWithParams(base ,object,hasparams) {
+exports.makeUrlWithParams=  function makeUrlWithParams(base ,object,hasparams) {
     if (typeof base!=='string') throw 'error,  base is not a string'
     if ( typeof object !=='object') throw 'error, Only Object is allowed'
     if (object instanceof Array===true) throw 'error, Only Object is allowed'
@@ -163,10 +163,7 @@ export function makeUrlWithParams(base ,object,hasparams) {
     }
     return base
   }
-export function breakJsonData(data) { 
-    if (typeof data==='object') {
-        data =JSON.stringify(data)
-    }
+exports.breakJsonData= function breakJsonData(data) {
     if (data.includes('{"')) data= data.replace('{"',`{${breakString+space4}"`);
     if (data.includes('"}')) data=data.replace('"}',`"${breakString}}`);
     for (let i = 5; i > 4; i++) {
@@ -181,7 +178,6 @@ export function breakJsonData(data) {
         if (data.includes('false,"')) data= data.replace('false,"',`false,${breakString+space4}"`);
         if (!data.includes('false,"')) i=3;
     }
-   
     
     for (let i = 5; i > 4; i++) {
         if (data.includes(`":["`)) data= data.replace(`":["`,`":[${breakString+space4}"`);  
