@@ -1,11 +1,19 @@
 {
   "name": "string-player",
+<<<<<<< HEAD
   "version": "1.0.7",
+=======
+  "version": "1.0.6",
+>>>>>>> 6aa5dd6c0a51ae89d6f93943f94d7ef9bd05c656
   "description": "This a package for playing with string very easily ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start":"nodemon test.js -e .js"
+=======
+    "start":"nodemon s.js"
+>>>>>>> 6aa5dd6c0a51ae89d6f93943f94d7ef9bd05c656
   },
   "repository": {
     "type": "git",
