@@ -1,16 +1,16 @@
 {
   "name": "string-player",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This a package for playing with string very easily ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon s.js"
+    "start":"nodemon test.js -e .js"
   },
   "repository": {
     "type": "git",
     "url": "(https://github.com/Mubtasimf443/string-player.git)"
-  },
+   },
   "keywords": [
     "string",
     "string-player",

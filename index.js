@@ -3,7 +3,8 @@
 InshaAllah, By his marcy I will Gain Success 
 */
 
-import { breakString, space4 } from "./variables.js";
+
+import { breakString, space4 } from "./_lib/variables.js";
 
 
 
@@ -254,3 +255,6 @@ export function breakJsonData(data) {
     }
     return data;
 }
+
+export {Validator } from "./_lib/Validator.js";
+ 

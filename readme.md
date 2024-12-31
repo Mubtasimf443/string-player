@@ -186,9 +186,74 @@ it prints
 ***You can contribute also by joining github-***<a href="https://github.com/Mubtasimf443/string-player">github Repository</a>
 
 
+
+### use of Validator
+```
+import Validator from "./_lib/Validator.js";
+
+let validate=new Validator({giveError:false});
+
+console.log(validate.isAllEmty(['e','',null,undefined]));
+//prints false 
+
+
+console.log(validate.isAllEmty(['',null,undefined]));
+//prints true
+```
+
+
+#### check email
+
+```
+
+
+import Validator from "./_lib/Validator.js";
+
+let isEmail = val => (new Validator()).isEmail(val);
+console.log(isEmail('mubtasim@gmail.com'));
+//prints true;
+
+console.log(isEmail('$mubtasim@gmail.com'));
+//prints false;
+
+console.log(isEmail('mubtasim@gmail..com'));
+//prints false;
+
+console.log(isEmail('mubtasim@@gmail.com'));
+//prints false;
+
+console.log(isEmail('mubtasim@gmail.c'));
+//prints false;
+
+
+console.log(isEmail('mubtasim@gmail.cm'));
+//prints true;
+
+console.log(isEmail('mubtasim@gmai,l.com'));
+//prints false;
+
+console.log(isEmail('[mubtasim@gmail.com]'));
+//prints false;
+
+console.log(isEmail('1mubtasim@gmail.com'));
+//prints false;
+```
+<br>
+
 ## Your Support will inspire me to create better packages for You
+
+<br>
+
 ***Follow Me ***
-Github => <a href="https://github.com/Mubtasimf443">Mubtasimf443</a>
+
+<ol>
+<li><a href="https://github.com/Mubtasimf443">Github Profile</a></li>
+<li><a href="https://x.com/MubtasimFu11492">X twitter</a></li>
+<li><a href="https://web.facebook.com/muhammadmubtasimf">Facebook</a></li>
+<li><a href="https://www.upwork.com/freelancers/~01d88c06387ca7603a">Upwork</a></li>
+<li><a href="tel:+8801750147694">+8801750147694</a></li>
+<li><a>Location : Anowara , Chittagong , Bangladesh</a></li>
+</ol>
 
 
 
