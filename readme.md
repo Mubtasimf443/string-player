@@ -186,7 +186,6 @@ it prints
 ***You can contribute also by joining github-***<a href="https://github.com/Mubtasimf443/string-player">github Repository</a>
 
 
-<<<<<<< HEAD
 
 ### use of Validator
 ```
@@ -255,11 +254,6 @@ console.log(isEmail('1mubtasim@gmail.com'));
 <li><a href="tel:+8801750147694">+8801750147694</a></li>
 <li><a>Location : Anowara , Chittagong , Bangladesh</a></li>
 </ol>
-=======
-## Your Support will inspire me to create better packages for You
-***Follow Me ***
-Github => <a href="https://github.com/Mubtasimf443">Mubtasimf443</a>
->>>>>>> 6aa5dd6c0a51ae89d6f93943f94d7ef9bd05c656
 
 
 
