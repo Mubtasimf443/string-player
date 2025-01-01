@@ -1,6 +1,6 @@
 {
   "name": "string-player",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "This a package for playing with string very easily ",
   "main": "index.js",
   "scripts": {

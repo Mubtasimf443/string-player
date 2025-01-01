@@ -100,7 +100,23 @@ export default class Validator {
             if ( this.isEmty(array[i]) === false )  return false;
             if (i === array.length -1) return true;
         }
-       
+    }
+    isNotEmty(val=""){
+        if (val === undefined || val === null) return false
+        if (this.isString(val)) {
+            if (val.trim().length === 0) return false
+            if (val.trim().length !== 0) return true
+        }
+        return true
+    }
+    isAllNotEmty(array=[]){
+        const errors=new ValidatorErrors()
+        if (Array.isArray(array) ===false) errors.notArrayError('isAllNotEmty', 'array is not a Array');
+        if (array.length ===0 ) errors.emtyArrayError(isAllNotEmty);
+        for (let i = 0; i < array.length; i++) {
+            if (this.isEmty(array[i])) return false;
+        }
+        return true;
     }
     isBool(val=false){
         return ( typeof val==='boolean')
@@ -235,5 +251,5 @@ export default class Validator {
 
 }
 
-
-export {Validator}
+const validate=new Validator({});
+export {Validator,validate}

@@ -258,5 +258,5 @@ export function breakJsonData(data) {
     return data;
 }
 
-export {Validator } from "./_lib/Validator.js";
+export {Validator ,validate} from "./_lib/Validator.js";
  
