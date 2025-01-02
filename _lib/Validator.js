@@ -203,6 +203,14 @@ export default class Validator {
     isObject(obj){
         return (typeof obj === 'object');
     }
+    json(data){
+        try {
+            if (typeof JSON.parse(data) === 'object') return true;
+            else return false
+        } catch (error) { 
+            return false  
+        }
+    }
     isNotA=new isNotA();
 }
 

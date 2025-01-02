@@ -1,6 +1,6 @@
 {
   "name": "string-player",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "This a package for playing with string very easily ",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,8 @@
     "isnumber",
     "isemty",
     "isstring",
-    "Validator"
+    "Validator",
+    "validate"
   ],
   "author": "Abdei Mustafa Muhammad Mubtasim Fuad",
   "license": "ISC",
