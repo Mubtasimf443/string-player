@@ -46,21 +46,41 @@ console.log({opt_of_4_charecters,opt_of_9_charecters});
 import { log, repleCaracter } from "string-player"
 
 
-
-let a =`function() {
-    return "Website is hack by us '
+log(repleCaracter(`
+export function checkTimeString(time) {
+    if (typeof time != 'string') throw 'not a correct time ' + time
+    if (!time.includes(':')) throw 'not a correct time ' + time
+    if (time.length !== 5) throw 'not a correct time ' + time
+    time = time.split(':')
+    if (time.length !== 2) throw 'not a correct time array'
+    if (Number(time[0]).toString().toLowerCase == 'nan') throw 'not a correct time[0] ' + time[0]
+    if (Number(time[1]).toString().toLowerCase == 'nan') throw 'not a correct time[1] ' + time[1]
+    if (time[0] < 0 || time[0] > 23) throw 'not a correct time[1] ' + time[0]
+    if (time[1] < 0 || time[1] > 59) throw 'not a correct time[1] ' + time[1]
+    // log( time[0] > 11 ? Number(time[0]) - 11 : time[0])
+    let string = (time[0] > 12 ? Number(time[0]) - 12 : time[0]) + ':' + time[1] + ' ' + (time[0] > 11 ? 'PM' : 'AM');
+    return string
 }`
-
-a =await repleCaracter(a);
-log(a)
+))
 
 ```
 
 
-returns 
+prints 
 ```
-function&#40;&#41; &#123;
-    return &#34;Website is hack by us &#39;
+export function checkTimeString&#40;time&#41; &#123;
+    if &#40;typeof time != &#39;string&#39;&#41; throw &#39;not a correct time &#39; + time
+    if &#40;!time.includes&#40;&#39;:&#39;&#41;&#41; throw &#39;not a correct time &#39; + time
+    if &#40;time.length !== 5&#41; throw &#39;not a correct time &#39; + time
+    time = time.split&#40;&#39;:&#39;&#41;
+    if &#40;time.length !== 2&#41; throw &#39;not a correct time array&#39;
+    if &#40;Number&#40;time&#91;0&#93;&#41;.toString&#40;&#41;.toLowerCase == &#39;nan&#39;&#41; throw &#39;not a correct time&#91;0&#93; &#39; + time&#91;0&#93;
+    if &#40;Number&#40;time&#91;1&#93;&#41;.toString&#40;&#41;.toLowerCase == &#39;nan&#39;&#41; throw &#39;not a correct time&#91;1&#93; &#39; + time&#91;1&#93;
+    if &#40;time&#91;0&#93; < 0 || time&#91;0&#93; > 23&#41; throw &#39;not a correct time&#91;1&#93; &#39; + time&#91;0&#93;      
+    if &#40;time&#91;1&#93; < 0 || time&#91;1&#93; > 59&#41; throw &#39;not a correct time&#91;1&#93; &#39; + time&#91;1&#93;      
+    // log&#40; time&#91;0&#93; > 11 ? Number&#40;time&#91;0&#93;&#41; - 11 : time&#91;0&#93;&#41;
+    let string = &#40;time&#91;0&#93; > 12 ? Number&#40;time&#91;0&#93;&#41; - 12 : time&#91;0&#93;&#41; + &#39;:&#39; + time&#91;1&#93; + &#39; &#39; + &#40;time&#91;0&#93; > 11 ? &#39;PM&#39; : &#39;AM&#39;&#41;;
+    return string
 &#125;
 ```
 
@@ -238,6 +258,9 @@ console.log(isEmail('[mubtasim@gmail.com]'));
 console.log(isEmail('1mubtasim@gmail.com'));
 //prints false;
 ```
+
+
+
 <br>
 
 ## Your Support will inspire me to create better packages for You

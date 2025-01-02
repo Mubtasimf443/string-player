@@ -3,10 +3,8 @@
 InshaAllah, By his marcy I will Gain Success 
 */
 
-import { log, repleCaracter } from "./index.js"
+import {log} from '../../index.js'
 
-
-log(repleCaracter(`
 export function checkTimeString(time) {
     if (typeof time != 'string') throw 'not a correct time ' + time
     if (!time.includes(':')) throw 'not a correct time ' + time
@@ -20,5 +18,4 @@ export function checkTimeString(time) {
     // log( time[0] > 11 ? Number(time[0]) - 11 : time[0])
     let string = (time[0] > 12 ? Number(time[0]) - 12 : time[0]) + ':' + time[1] + ' ' + (time[0] > 11 ? 'PM' : 'AM');
     return string
-}`
-))
+}

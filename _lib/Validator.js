@@ -4,54 +4,8 @@
 InshaAllah, By his marcy I will Gain Success 
 */
 
-class ValidatorErrors {
-    constructor() {  
-    }
-    emtyArrayError(functionName){
-        throw ({
-            name :"validator_error",
-            error:{
-                functionName: functionName,
-                emtyArray:true
-            }
-        });
-    }
-    notStringError(functionName,message){
-        let errorObject={
-            name :"validator_error",
-            error:{
-                functionName: functionName,
-                notString:true
-            }
-        };
-        if (message) errorObject.error['message']=message;
-        throw errorObject;
-    }
-    emtyError(functionName,message){
-        let errorObject={
-            name :"validator_error",
-            error:{
-                functionName: functionName,
-                emty:true
-            }
-        };
-        if (message) errorObject.error['message']=message;
-        throw errorObject;
-    }
-
-    notArrayError(functionName,message){
-        let errorObject={
-            name :"validator_error",
-            error:{
-                functionName: functionName,
-                notArray:true
-            }
-        };
-        if (message) errorObject.error['message']=message;
-        throw errorObject;
-    }
-}
- 
+import isNotA from "./helpers/isNotA.js";
+import ValidatorErrors from "./helpers/ValidatorErrors.js";
 
 export default class Validator {
     constructor({giveError}={}) {   
@@ -169,7 +123,6 @@ export default class Validator {
     isFunc(func=()=>{}){
         return (typeof func==='function')
     }
-    
     isAllFunc(array=[]){
         if (array.length===0){
             if (this.giveError) {
@@ -232,7 +185,6 @@ export default class Validator {
         }
         return false;
     }
-
     isEmail(mail=''){
         if (this.isEmty(mail)) return false;
         if (!this.isString(mail)) return false;
@@ -248,8 +200,13 @@ export default class Validator {
         if (this.hasAll(mail, ['%', '<', '>', "$","&",'*','#', '^', '`','"',"'", "!", "~", '|',',', "}", "{",'[',']','(',')'])) return false;
         return true;
     }
-
+    isObject(obj){
+        return (typeof obj === 'object');
+    }
+    isNotA=new isNotA();
 }
 
+
+
 const validate=new Validator({});
-export {Validator,validate}
+export {Validator,validate};
