@@ -211,6 +211,9 @@ export default class Validator {
             return false  
         }
     }
+    isNull(val) {
+        return (val === null)
+    }
     isNotA=new isNotA();
 }
 
