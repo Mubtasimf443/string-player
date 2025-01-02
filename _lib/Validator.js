@@ -185,6 +185,12 @@ export default class Validator {
         }
         return false;
     }
+    isNull(val) {
+        return (val === null);
+    }
+    isUndefined(val){
+        return (val === undefined);
+    }
     isEmail(mail=''){
         if (this.isEmty(mail)) return false;
         if (!this.isString(mail)) return false;
@@ -211,9 +217,7 @@ export default class Validator {
             return false  
         }
     }
-    isNull(val) {
-        return (val === null)
-    }
+    
     isNotA=new isNotA();
 }
 

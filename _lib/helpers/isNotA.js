@@ -10,7 +10,7 @@ export default class isNotA {
     array = array => (Array.isArray(array) === false);
     boolean = (bool) => (typeof bool !== 'boolean');
     emty = val => (!val ? true : false);
-    nul = data=> (data !== null);
+    null = data=> (data !== null);
     object=obj=> (typeof obj !== 'object');
     func= f => (typeof f !== 'function');
     num =function (number) {
@@ -24,5 +24,8 @@ export default class isNotA {
         } catch (error) { 
             return true  
         }
+    }
+    undefined(val) {
+        return (val !== undefined);
     }
 }
