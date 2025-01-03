@@ -5,7 +5,7 @@ InshaAllah, By his marcy I will Gain Success
 
 export { repleCaracter ,repleCrAll} from "./_lib/utils/repleCaracter.js";
 export { checkTimeString } from "./_lib/utils/checkString.js";
-export { makeLinkString, MakePriceString, makeUrlWithParams } from "./_lib/utils/makestring.js";
+export { makeLinkString, MakePriceString, makeUrlWithParams,MakePriceStringSync } from "./_lib/utils/makestring.js";
 export const log = console.log;
 export { GenerateOTP } from "./_lib/utils/GenerateOTP.js";
 export { breakJsonData } from "./_lib/utils/breakJsonData.js";
