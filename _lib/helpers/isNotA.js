@@ -4,7 +4,7 @@
 InshaAllah, By his marcy I will Gain Success 
 */
 
-export default class isNotA {
+export class isNotA {
     constructor() {}
     string = value => (typeof value !== 'string');
     array = array => (Array.isArray(array) === false);
@@ -29,3 +29,5 @@ export default class isNotA {
         return (val !== undefined);
     }
 }
+export default isNotA;
+export const isnota=new isNotA()
