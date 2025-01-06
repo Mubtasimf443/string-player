@@ -29,7 +29,16 @@ export default  class ToBe {
         else if (equal) return (val.length>=min);
         else return (val.length>min);
     }
-
+    gt(val , min){
+        if (!validate.isNum(min)) throw new Error("min length is not a number");
+        if (!validate.isNum(val)) throw new Error("val length is not a number");
+        return (val > min);
+    }
+    lt(val , max){
+        if (!validate.isNum(max)) throw new Error("max length is not a number");
+        if (!validate.isNum(val)) throw new Error("val length is not a number");
+        return (val < max);
+    }
 }
 
 export const tobe=new ToBe({});
