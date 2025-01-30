@@ -84,6 +84,23 @@ export function checkTimeString&#40;time&#41; &#123;
 &#125;
 ```
 
+#### repleCrAll
+repleCrAll is use for repling string array
+```
+import { log, repleCaracter ,repleCrAll} from "string-player"
+
+//repling 3 strings
+let [functions , arrowFunctions,print]=repleCrAll(['function(){}', `()=>{}`, `console.log('hello')]`]);
+//printing repled strings
+console.log({ functions, arrowFunctions, print });
+
+// printed Data
+// {
+//     functions: 'function&#40;&#41;&#123;&#125;',      
+//     arrowFunctions: '&#40;&#41;=>&#123;&#125;',       
+//     print: 'console.log&#40;&#39;hello&#39;&#41;&#93;'
+// }
+```
 
 
 #### functionality of MakePriceString
@@ -260,12 +277,22 @@ console.log(isEmail('1mubtasim@gmail.com'));
 ```
 
 
+#### isValidUrl
+<p>You Check String is url or not By isValidUrl Function , Just Parse The string to the isValidUrl</p>
+
+```
+console.log(isValidUrl('https://x.com/search?q=Building&src=trend_click&vertical=trends'));
+
+```
+
 
 <br>
 
 ## Your Support will inspire me to create better packages for You
 
 <br>
+
+
 
 ***Follow Me ***
 
