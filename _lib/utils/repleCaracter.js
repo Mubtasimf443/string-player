@@ -74,3 +74,17 @@ export function repleCrAll(array=[]) {
     }
     return repleArray;
 }
+
+export function replaceMultySpace(text='') {
+    let space = /( )( )( )?( )?( )?( )?( )?( )?( )?( )?/g;
+    text=text.replaceAll(space, '');
+    return text;
+}
+
+export function replaceMultySpaceArray(array=new Array(), { onlyStringAreValid}) {
+    array = array.map(function (element,index){
+        if (onlyStringAreValid === true && typeof element !== 'string') throw 'Your Array contains non-string in index : '+index;
+        return replaceMultySpace(element)
+    });
+    return array;
+}

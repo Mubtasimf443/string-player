@@ -281,9 +281,29 @@ console.log(isEmail('1mubtasim@gmail.com'));
 <p>You Check String is url or not By isValidUrl Function , Just Parse The string to the isValidUrl</p>
 
 ```
-console.log(isValidUrl('https://x.com/search?q=Building&src=trend_click&vertical=trends'));
+
+import { isValidUrl } from "./index.js";
+
+let startingTime=Date.now();
+
+for (let i = 0; i <= 1000; i++) {
+    console.log(isValidUrl('https://x.com/search?q=Building&src=trend_click&vertical=trends'));
+    if (i===1000) {
+        let totalTime =Date.now()-startingTime;
+        console.log('totalTime of Validating 1000 url is '+(totalTime/(1000))+'s');
+        console.log('totalTime of Validating 1 url is '+(totalTime/(1000*1000))+'s');
+    }
+}
+
+//totalTime of Validating 1000 url is 0.795s
+//totalTime of Validating 1 url is 0.000795s
+```
+#### for replacing spaces from string you can use replaceMultySpaceArray or replaceMultySpace
 
 ```
+let textWithoutMultySpace = replaceMultySpace(' fd      sfsdf     ');
+```
+
 
 
 <br>
